@@ -74,7 +74,7 @@ public class AppControllerTests {
     @Test
     public void getAllCustomers_ScenarioB() throws Exception {
         // arrange
-        doThrow(new RuntimeException("nope")).when(service).getAllCustomers();
+        doThrow(new RuntimeException("exception")).when(service).getAllCustomers();
 
         // act
         MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/customers"))
